@@ -1,0 +1,26 @@
+
+.project__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  }
+  .project__wrapper header {
+    display: flex;
+    padding: 1rem;
+  }
+  .project__wrapper header > button {
+    background-color: transparent;
+    border: none;
+  }
+  .project__wrapper header > h1 {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .project__content {
+    overflow: auto;
+    border: 1px solid var(--color-border);
+    border-width: 1px 0 1px 0;
+  }

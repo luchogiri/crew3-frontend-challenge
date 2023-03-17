@@ -1,0 +1,278 @@
+/* normalize / reset */
+
+:root {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: var(--color-text);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body, #root, #__next {
+  height: 100%;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* animations */
+
+.shimmer {
+  min-height: 1.25rem;
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #eff1f3 4%, #e8e8e8 25%, #eff1f3 36%);
+  background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* viewports */
+:root {
+  --viewport-xs: 320px;
+  --viewport-sm: 768px;
+  --viewport-md: 992px;
+  --viewport-lg: 1200px;
+}
+
+/* colors */
+
+:root {
+  --color-bg: rgba(255, 255, 255, 1);
+  --color-bg-hover: rgba(0, 0, 0, .2);
+  --color-bg-assistive: #ff24bd;
+  --color-bg-assistive-hover: #ea10ac;
+  --color-bg-assistive-pressed: #ea10ac;
+  --color-bg-assistive-secondary: #cb0b96;
+  --color-bg-assistive-tertiary: #ffe0fc;
+  --color-bg-brand: #0d99ff;
+  --color-bg-brand-hover: #007be5;
+  --color-bg-brand-pressed: #007be5;
+  --color-bg-brand-secondary: #0768cf;
+  --color-bg-brand-tertiary: #e5f4ff;
+  --color-bg-component: #9747ff;
+  --color-bg-component-hover: #8638e5;
+  --color-bg-component-pressed: #8638e5;
+  --color-bg-component-secondary: #7c2bda;
+  --color-bg-component-tertiary: #f1e5ff;
+  --color-bg-danger: #f24822;
+  --color-bg-danger-hover: #dc3412;
+  --color-bg-danger-pressed: #dc3412;
+  --color-bg-danger-secondary: #bd2915;
+  --color-bg-danger-tertiary: #ffe2e0;
+  --color-bg-disabled: #d9d9d9;
+  --color-bg-disabled-secondary: #b3b3b3;
+  --color-bg-menu: #1e1e1e;
+  --color-bg-menu-disabled: #757575;
+  --color-bg-menu-hover: #2c2c2c;
+  --color-bg-menu-pressed: #2c2c2c;
+  --color-bg-menu-secondary: #383838;
+  --color-bg-menu-selected: #0d99ff;
+  --color-bg-menu-selected-hover: #007be5;
+  --color-bg-menu-selected-pressed: #007be5;
+  --color-bg-menu-selected-secondary: #394360;
+  --color-bg-menu-selected-tertiary: #394360;
+  --color-bg-menu-tertiary: #444444;
+  --color-bg-onselected: #bde3ff;
+  --color-bg-onselected-hover: #bde3ff;
+  --color-bg-onselected-pressed: #bde3ff;
+  --color-bg-pressed: #f5f5f5;
+  --color-bg-secondary: #f5f5f5;
+  --color-bg-selected: #e5f4ff;
+  --color-bg-selected-hover: #bde3ff;
+  --color-bg-selected-pressed: #bde3ff;
+  --color-bg-selected-secondary: #f2f9ff;
+  --color-bg-selected-strong: #0d99ff;
+  --color-bg-selected-tertiary: #f2f9ff;
+  --color-bg-success: #14ae5c;
+  --color-bg-success-hover: #009951;
+  --color-bg-success-pressed: #009951;
+  --color-bg-success-secondary: #008043;
+  --color-bg-success-tertiary: #cff7d3;
+  --color-bg-tertiary: #e6e6e6;
+  --color-bg-toolbar: #2c2c2c;
+  --color-bg-toolbar-disabled: #757575;
+  --color-bg-toolbar-hover: #111111;
+  --color-bg-toolbar-pressed: #111111;
+  --color-bg-toolbar-secondary: #383838;
+  --color-bg-toolbar-selected: #0d99ff;
+  --color-bg-toolbar-selected-hover: #007be5;
+  --color-bg-toolbar-selected-pressed: #007be5;
+  --color-bg-toolbar-selected-secondary: #0768cf;
+  --color-bg-toolbar-selected-tertiary: #0d99ff;
+  --color-bg-toolbar-tertiary: #444444;
+  --color-bg-tooltip: #1e1e1e;
+  --color-bg-tooltip-disabled: #757575;
+  --color-bg-tooltip-hover: #2c2c2c;
+  --color-bg-tooltip-pressed: #2c2c2c;
+  --color-bg-tooltip-secondary: #383838;
+  --color-bg-tooltip-selected: #0d99ff;
+  --color-bg-tooltip-selected-hover: #007be5;
+  --color-bg-tooltip-selected-pressed: #007be5;
+  --color-bg-tooltip-selected-secondary: #394360;
+  --color-bg-tooltip-selected-tertiary: #394360;
+  --color-bg-tooltip-tertiary: #444444;
+  --color-bg-warning: #ffcd29;
+  --color-bg-warning-hover: #ffc21a;
+  --color-bg-warning-pressed: #ffc21a;
+  --color-bg-warning-secondary: #fab815;
+  --color-bg-warning-tertiary: #fff1c2;
+  --color-border: #e6e6e6;
+  --color-border-component: #e4ccff;
+  --color-border-component-hover: #9747ff;
+  --color-border-component-strong: #8638e5;
+  --color-border-danger: #ffc7c2;
+  --color-border-danger-strong: #dc3412;
+  --color-border-disabled: #e6e6e6;
+  --color-border-disabled-strong: rgba(0, 0, 0, .3);
+  --color-border-menu: #383838;
+  --color-border-menu-disabled: #383838;
+  --color-border-menu-disabled-strong: #383838;
+  --color-border-menu-onselected: #007be5;
+  --color-border-menu-onselected-strong: rgba(255, 255, 255, 1);
+  --color-border-menu-selected: #0d99ff;
+  --color-border-menu-selected-strong: #80caff;
+  --color-border-menu-strong: rgba(255, 255, 255, 1);
+  --color-border-oncomponent: #8638e5;
+  --color-border-oncomponent-strong: rgba(255, 255, 255, 1);
+  --color-border-ondanger: #dc3412;
+  --color-border-onselected: #bde3ff;
+  --color-border-onselected-strong: rgba(0, 0, 0, .9);
+  --color-border-onsuccess: #009951;
+  --color-border-onsuccess-strong: rgba(255, 255, 255, 1);
+  --color-border-onwarning: #fab815;
+  --color-border-onwarning-strong: rgba(0, 0, 0, .9);
+  --color-border-selected: #0d99ff;
+  --color-border-selected-strong: #007be5;
+  --color-border-strong: #2c2c2c;
+  --color-border-success: #aff4c6;
+  --color-border-success-strong: #009951;
+  --color-border-toolbar: #444444;
+  --color-border-toolbar-disabled: rgba(255, 255, 255, .4);
+  --color-border-toolbar-onselected: rgba(255, 255, 255, 1);
+  --color-border-toolbar-selected: #0d99ff;
+  --color-border-toolbar-selected-strong: #80caff;
+  --color-border-toolbar-strong: rgba(255, 255, 255, 1);
+  --color-border-tooltip: #383838;
+  --color-border-tooltip-disabled: #383838;
+  --color-border-tooltip-disabled-strong: #383838;
+  --color-border-tooltip-onselected: #007be5;
+  --color-border-tooltip-onselected-strong: rgba(255, 255, 255, 1);
+  --color-border-tooltip-selected: #0d99ff;
+  --color-border-tooltip-selected-strong: #80caff;
+  --color-border-tooltip-strong: rgba(255, 255, 255, 1);
+  --color-border-warning: #ffe8a3;
+  --color-border-warning-strong: #b86200;
+  --color-text: rgba(0, 0, 0, .9);
+  --color-text-component: #8638e5;
+  --color-text-component-pressed: #7c2bda;
+  --color-text-component-secondary: #c5b2dc;
+  --color-text-component-tertiary: #c5b2dc;
+  --color-text-danger: #dc3412;
+  --color-text-danger-secondary: #dc3412;
+  --color-text-danger-tertiary: #dc3412;
+  --color-text-disabled: rgba(0, 0, 0, .3);
+  --color-text-hover: rgba(0, 0, 0, .9);
+  --color-text-menu: rgba(255, 255, 255, 1);
+  --color-text-menu-danger: #ffafa3;
+  --color-text-menu-disabled: rgba(255, 255, 255, .4);
+  --color-text-menu-hover: rgba(255, 255, 255, 1);
+  --color-text-menu-ondisabled: #1e1e1e;
+  --color-text-menu-onselected: rgba(255, 255, 255, 1);
+  --color-text-menu-secondary: rgba(255, 255, 255, .7);
+  --color-text-menu-secondary-hover: rgba(255, 255, 255, 1);
+  --color-text-menu-selected: #80caff;
+  --color-text-menu-selected-secondary: #80caff;
+  --color-text-menu-selected-tertiary: #80caff;
+  --color-text-menu-tertiary: rgba(255, 255, 255, .4);
+  --color-text-menu-tertiary-hover: rgba(255, 255, 255, 1);
+  --color-text-menu-warning: #ffd966;
+  --color-text-oncomponent: rgba(255, 255, 255, 1);
+  --color-text-oncomponent-secondary: rgba(255, 255, 255, .8);
+  --color-text-oncomponent-tertiary: rgba(255, 255, 255, .4);
+  --color-text-ondanger: rgba(255, 255, 255, 1);
+  --color-text-ondanger-secondary: rgba(255, 255, 255, .8);
+  --color-text-ondanger-tertiary: rgba(255, 255, 255, .4);
+  --color-text-ondisabled: rgba(255, 255, 255, 1);
+  --color-text-oninverse: rgba(255, 255, 255, .9);
+  --color-text-onselected: rgba(0, 0, 0, .9);
+  --color-text-onselected-secondary: rgba(0, 0, 0, .5);
+  --color-text-onselected-strong: rgba(255, 255, 255, 1);
+  --color-text-onselected-tertiary: rgba(0, 0, 0, .3);
+  --color-text-onsuccess: rgba(255, 255, 255, 1);
+  --color-text-onsuccess-secondary: rgba(255, 255, 255, .8);
+  --color-text-onsuccess-tertiary: rgba(255, 255, 255, .4);
+  --color-text-onwarning: rgba(0, 0, 0, .9);
+  --color-text-onwarning-secondary: rgba(0, 0, 0, .5);
+  --color-text-onwarning-tertiary: rgba(0, 0, 0, .3);
+  --color-text-secondary: rgba(0, 0, 0, .5);
+  --color-text-secondary-hover: rgba(0, 0, 0, .9);
+  --color-text-selected: #007be5;
+  --color-text-selected-secondary: #007be5;
+  --color-text-selected-tertiary: #007be5;
+  --color-text-success: #009951;
+  --color-text-success-secondary: #009951;
+  --color-text-success-tertiary: #009951;
+  --color-text-tertiary: rgba(0, 0, 0, .3);
+  --color-text-tertiary-hover: rgba(0, 0, 0, .9);
+  --color-text-toolbar: rgba(255, 255, 255, 1);
+  --color-text-toolbar-danger: #ffafa3;
+  --color-text-toolbar-disabled: rgba(255, 255, 255, .4);
+  --color-text-toolbar-hover: rgba(255, 255, 255, 1);
+  --color-text-toolbar-ondisabled: #2c2c2c;
+  --color-text-toolbar-onselected: rgba(255, 255, 255, 1);
+  --color-text-toolbar-secondary: rgba(255, 255, 255, .7);
+  --color-text-toolbar-secondary-hover: rgba(255, 255, 255, 1);
+  --color-text-toolbar-selected: #80caff;
+  --color-text-toolbar-selected-secondary: #80caff;
+  --color-text-toolbar-selected-tertiary: #80caff;
+  --color-text-toolbar-tertiary: rgba(255, 255, 255, .4);
+  --color-text-toolbar-tertiary-hover: rgba(255, 255, 255, 1);
+  --color-text-toolbar-warning: #ffd966;
+  --color-text-tooltip: rgba(255, 255, 255, 1);
+  --color-text-tooltip-danger: #ffafa3;
+  --color-text-tooltip-disabled: rgba(255, 255, 255, .4);
+  --color-text-tooltip-hover: rgba(255, 255, 255, 1);
+  --color-text-tooltip-ondisabled: #1e1e1e;
+  --color-text-tooltip-onselected: rgba(255, 255, 255, 1);
+  --color-text-tooltip-secondary: rgba(255, 255, 255, .7);
+  --color-text-tooltip-secondary-hover: rgba(255, 255, 255, 1);
+  --color-text-tooltip-selected: #80caff;
+  --color-text-tooltip-selected-secondary: #80caff;
+  --color-text-tooltip-selected-tertiary: #80caff;
+  --color-text-tooltip-tertiary: rgba(255, 255, 255, .4);
+  --color-text-tooltip-tertiary-hover: rgba(255, 255, 255, 1);
+  --color-text-tooltip-warning: #ffd966;
+  --color-text-warning: #b86200;
+  --color-text-warning-secondary: #b86200;
+  --color-text-warning-tertiary: #b86200;
+}

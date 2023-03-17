@@ -1,0 +1,76 @@
+
+.reactor {
+  background-color: var(--color-bg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: var(--viewport-md);
+  height: 45rem;
+  position: relative;
+  cursor: pointer;
+}
+
+  .reactor__action {
+    position: absolute;
+    display: flex;
+    transform: translateY(-2rem);
+    width: 16rem;
+    z-index: 99;
+  }
+    .reactor__action--icon {
+      display: block;
+      height: 2rem;
+      width: 2rem;
+      background-color: var(--color-bg-menu-selected);
+      border-radius: 50% 50% 50% 10%;
+      margin-top: 0.125rem;
+      margin-right: 0.5rem;
+    }
+    .reactor__action__input {
+      background-color: var(--color-bg-selected);
+      border: var(--color-border);
+      border-radius: 0.5rem;
+      padding: 0.25rem;
+    }
+      .reactor__action__input > input {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        width: 10rem;
+      }
+
+      .reactor__action__input > button {
+        height: 2rem;
+        width: 2rem;
+        color: white;
+        background-color: var(--color-bg-menu-selected);
+        border-radius: 50%;
+        border: none;
+      }
+
+    .reactor__action--icons {
+      position: absolute;
+      left: 2.5rem;
+      bottom: -2.25rem;
+      font-size: 1.25rem;
+    }
+      .reactor__action--icons > span {
+        padding-left: 0.5rem;
+      }
+
+  .reactor > span {
+    position: absolute;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    z-index: 9;
+  }
+    .reactor > span > h2 {
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .reactor > span > h3 {
+      font-weight: 400;
+      font-size: 1rem;
+    }

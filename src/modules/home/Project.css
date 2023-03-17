@@ -1,0 +1,44 @@
+
+.home__recents__project {
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  width: var(--viewport-xs);
+  overflow: hidden;
+  transition: box-shadow 0.25s;
+}
+.home__recents__project:hover {
+  box-shadow: 0rem 0.125rem 0.5rem var(--color-bg-hover);
+}
+
+  .home__recents__project--img {
+    overflow: hidden;
+    height: 12rem;
+    position: relative;
+  }
+
+    .home__recents__project--img > img {
+      position: relative;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 2.5s linear;
+    }
+      .home__recents__project:hover .home__recents__project--img > img {
+        transform: translate(-50%, -50%) scale(110%);
+      }
+    .home__recents__project--img > span {
+      position: absolute;
+      inset: 0;
+      background-color: var(--color-bg-hover);
+      transition: opacity 0.25s;
+      cursor: pointer;
+    }
+      .home__recents__project:hover .home__recents__project--img > span {
+        opacity: 0.5;
+      }
+
+  .home__recents__project > h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.25rem 0 0.5rem 1rem;
+  }
